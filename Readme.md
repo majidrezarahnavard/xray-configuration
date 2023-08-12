@@ -1,8 +1,13 @@
 # Configuration for the xray reality
 
 ```
-wget https://raw.githubusercontent.com/majidrezarahnavard/xray-configuration/main/install/sh
- 
+cd /root
+mkdir /root/xray-configuration/
+cd /root/xray-configuration/
+wget https://raw.githubusercontent.com/majidrezarahnavard/xray-configuration/main/install.sh
+sudo chmod +x /root/xray-configuration/install.sh
+bash /root/xray-configuration/install.sh
+
 ```
 
 # change ssh port
