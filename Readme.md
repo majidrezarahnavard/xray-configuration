@@ -1,1 +1,1 @@
-# Configuration for the xray reality servergit push esma main
+# Configuration for the xray reality
