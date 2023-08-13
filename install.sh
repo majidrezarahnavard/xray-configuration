@@ -35,18 +35,18 @@ cat /etc/timezone
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta -u root
 
 
-xray x25519
 
 # Generate key pair
 echo "Generating key pair..."
-key_pair=$($install_dir/xray x25519)
+key_pair=$(xray x25519)
 echo "Key pair generation complete."
-echo key_pair
+echo $key_pair
 
-# Extract private key and public key
-private_key=$(echo "$key_pair" | awk '/PrivateKey/ {print $2}' | tr -d '"')
-public_key=$(echo "$key_pair" | awk '/PublicKey/ {print $2}' | tr -d '"')
+
 
 # Generate necessary values
-uuid=$($install_dir/xray generate uuid)
-short_id=$($install_dir/xray generate rand --hex 8)
+uuid=$(cat /proc/sys/kernel/random/uuid)
+short_id=$(head -c 8 /dev/urandom | tr -dc 'a-f0-9')
+
+echo $uuid
+echo $short_id
