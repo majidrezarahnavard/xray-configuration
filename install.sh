@@ -46,7 +46,19 @@ echo $key_pair
 
 # Generate necessary values
 uuid=$(cat /proc/sys/kernel/random/uuid)
-short_id=$(head -c 8 /dev/urandom | tr -dc 'a-f0-9')
+
+
+# Define a list of characters and numbers
+characters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+# Generate a 16-digit random string
+short_id=""
+for i in {1..16}; do
+  random_char=$(echo $characters | tr -dc "$RANDOM")
+  short_id+="$random_char"
+done
+
+
 
 echo $uuid
 echo $short_id
