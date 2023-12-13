@@ -32,6 +32,10 @@ lost connection
 ```
 or restart your service ```service ssh status``` and ```service ssh restart```
 
+
+# run Xray
+xray run -c reality.json
+
 # sample configuration
 
 vless://a6c997ea-dfb4-4b8c-9b85-23c284ac34cb@ip:8443?encryption=none&security=reality&sni=datadoghq.com&fp=chrome&pbk=ppvcYiM3tSVsvSSATN4-4_vpySUlr7bDTfHWCdQNEhg&sid=0123456789abcdef&spx=%2Fdoggo&type=grpc#Moscow%20reality%20test

@@ -6,35 +6,43 @@
         {
             "listen": "0.0.0.0",
             "port": 8443,
-            "protocol": "vless",
+            "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
-                        "id": "4d327bac-f5f4-4b1e-8828-42ae50615ad7",
-                        "flow": ""
+                        "id": "5107da70-b827-44d3-9aaa-6390babb2b06"
                     }
-                ],
-                "decryption": "none"
+                ]
             },
             "streamSettings": {
-                "network": "grpc",
-                "security": "reality",
-                "realitySettings": {
-                    "show": false,
-                    "dest": "datadoghq.com:443",
-                    "xver": 0,
-                    "serverNames": [
-                        "datadoghq.com"
-                    ],
-                    "privateKey": "4Fr8ACuiI2ffhrYEvXZ8WFmAo5oBQz6BA9xHsrxhGnc",
-                    "minClientVer": "",
-                    "maxClientVer": "",
-                    "maxTimeDiff": 0,
-                    "shortIds": [
-                        "0123456789abcdef"
-                    ],
-                    "spiderX": "/doggo"
-                }
+                "network": "tcp",
+                "tcpSettings": {
+                    "header": {
+                        "type": "http",
+                        "response": {
+                            "version": "1.1",
+                            "status": "200",
+                            "reason": "OK",
+                            "headers": {
+                                "Content-Type": [
+                                    "application/octet-stream",
+                                    "video/mpeg",
+                                    "application/x-msdownload",
+                                    "text/html",
+                                    "application/x-shockwave-flash"
+                                ],
+                                "Transfer-Encoding": [
+                                    "chunked"
+                                ],
+                                "Connection": [
+                                    "keep-alive"
+                                ],
+                                "Pragma": "no-cache"
+                            }
+                        }
+                    }
+                },
+                "security": "none"
             }
         },
         {
@@ -44,7 +52,7 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "4d327bac-f5f4-4b1e-8828-42ae50615ad7",
+                        "id": "0cbb7ae8-bdd7-4563-9e62-8288e2d2c9f1",
                         "flow": ""
                     }
                 ],
@@ -72,6 +80,16 @@
             }
         }
     ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "tag": "block"
+        }
+    ],
     "routing": {
         "domainStrategy": "IPOnDemand",
         "rules": [
@@ -92,13 +110,5 @@
             }
         ]
         
-    },
-    "outbounds":[
-        {
-            "tag":"direct",
-            "protocol":"freedom"
-        }
-    ]
-
-
+    }
 }
