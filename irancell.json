@@ -5,12 +5,12 @@
     "inbounds": [
         {
             "listen": "0.0.0.0",
-            "port": 1234,
+            "port": 443,
             "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
-                        "id": ""
+                        "id": "5107da70-b827-44d3-9aaa-6390babb2b06"
                     }
                 ]
             },
@@ -27,7 +27,8 @@
                                 "Host": "http://mashhad1.irancell.ir",
                                 "Connection": [
                                     "Keep-Alive"
-                                ]
+                                ],
+                                "Content-Type" : "text/html"
                             }
                         }
                     }
