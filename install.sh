@@ -6,7 +6,7 @@ mkdir $install_dir
 
 
 wget https://raw.githubusercontent.com/majidrezarahnavard/xray-configuration/main/reality.json
-
+wget https://raw.githubusercontent.com/majidrezarahnavard/xray-configuration/main/vmss_http.json
 
 #instal monitoring
 apt-get update
