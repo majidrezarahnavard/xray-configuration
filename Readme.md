@@ -73,3 +73,6 @@ Content-Length: 109
 ```
 <html><head><title>OoklaServer</title></head><body><h1>OoklaServer</h1><p>It worked!<br /></p></body></html>
 ```
+
+# example of client config
+vmess://eyJhZGQiOiIxMjcuMC4wLjEiLCJhaWQiOiIwIiwiaG9zdCI6Im1hc2hoYWQxLmlyYW5jZWxsLmlyIiwiaWQiOiIxMjM0IiwibmV0IjoidGNwIiwicGF0aCI6Ii9zcGVlZHRlc3QiLCJwb3J0IjoiODA4MCIsInBzIjoic2FyaW5hIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJodHRwIiwidiI6IjIifQ==
