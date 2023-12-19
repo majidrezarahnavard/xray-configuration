@@ -66,3 +66,10 @@ Content-Length: 109
                            ],
            }
 
+
+
+# seh html inside the response
+
+```
+<html><head><title>OoklaServer</title></head><body><h1>OoklaServer</h1><p>It worked!<br /></p></body></html>
+```
