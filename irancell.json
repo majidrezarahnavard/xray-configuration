@@ -10,7 +10,8 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "5107da70-b827-44d3-9aaa-6390babb2b06"
+                        "id": "5107da70-b827-44d3-9aaa-6390babb2b06",
+                        "security" : "auto"
                     }
                 ]
             },
