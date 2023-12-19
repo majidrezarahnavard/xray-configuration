@@ -7,6 +7,7 @@ mkdir $install_dir
 
 wget https://raw.githubusercontent.com/majidrezarahnavard/xray-configuration/main/reality.json
 wget https://raw.githubusercontent.com/majidrezarahnavard/xray-configuration/main/vmss_http.json
+wget https://raw.githubusercontent.com/majidrezarahnavard/xray-configuration/main/irancell.json
 
 #instal monitoring
 apt-get update
