@@ -42,3 +42,27 @@ vless://a6c997ea-dfb4-4b8c-9b85-23c284ac34cb@ip:8443?encryption=none&security=re
 
 
 vless://a6c997ea-dfb4-4b8c-9b85-23c284ac34cb@ip:443?encryption=none&security=reality&sni=datadoghq.com&fp=chrome&pbk=ppvcYiM3tSVsvSSATN4-4_vpySUlr7bDTfHWCdQNEhg&sid=0123456789abcdef&spx=%2Fdoggo&type=tcp&headerType=none#Moscow%20reality%20test
+
+
+# Set header
+
+send curl command and get response information then put it inside the headers.
+
+```
+curl -i http://mashhad1.irancell.ir:8080
+```
+
+HTTP/1.1 200 OK
+Date: Tue, 19 Dec 2023 15:34:05 GMT
+Connection: Keep-Alive
+Content-Type: text/html
+Content-Length: 109
+
+
+"headers": {
+             "Host": "http://mashhad1.irancell.ir",
+             "Connection": [
+                            "Keep-Alive"
+                           ],
+           }
+
