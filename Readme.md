@@ -74,5 +74,5 @@ Content-Length: 109
 <html><head><title>OoklaServer</title></head><body><h1>OoklaServer</h1><p>It worked!<br /></p></body></html>
 ```
 
-# example of client config
-vmess://eyJhZGQiOiIxMjcuMC4wLjEiLCJhaWQiOiIwIiwiaG9zdCI6Im1hc2hoYWQxLmlyYW5jZWxsLmlyIiwiaWQiOiIxMjM0IiwibmV0IjoidGNwIiwicGF0aCI6Ii9zcGVlZHRlc3QiLCJwb3J0IjoiODA4MCIsInBzIjoic2FyaW5hIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJodHRwIiwidiI6IjIifQ==
+# example of irancell client config
+vmess://eyJhZGQiOiI0NS4xNTYuMjQuMjI0IiwiYWlkIjoiMCIsImhvc3QiOiJtYXNoaGFkMS5pcmFuY2VsbC5pciIsImlkIjoiNTEwN2RhNzAtYjgyNy00NGQzLTlhYWEtNjM5MGJhYmIyYjA2IiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI4MDgwIiwicHMiOiJzYXJpbmEiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Imh0dHAiLCJ2IjoiMiJ9
