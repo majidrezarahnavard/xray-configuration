@@ -63,3 +63,13 @@ done
 
 echo $uuid
 echo $short_id
+
+
+
+# Install apache2 and clone the website
+apt-get install apache2
+
+cd /var/www/html/
+git clone https://github.com/codingstella/vCard-personal-portfolio.git
+cp -ar ./vCard-personal-portfolio/*  /var/www/html/
+rm -rf ./vCard-personal-portfolio/
