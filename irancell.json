@@ -19,19 +19,34 @@
                 "network": "tcp",
                 "tcpSettings": {
                     "header": {
-                        "type": "http",
-                        "response": {
-                            "version": "1.1",
-                            "status": "200",
-                            "reason": "OK",
+                        "request": {
                             "headers": {
-                                "Host": "http://mashhad1.irancell.ir",
-                                "Connection": [
-                                    "Keep-Alive"
-                                ],
-                                "Content-Type" : "text/html"
-                            }
-                        }
+                              "Host": [
+                                "http://mashhad1.irancell.ir"
+                              ]
+                            },
+                            "method": "GET",
+                            "path": [
+                              "/"
+                            ]
+                          },
+                          "response": {
+                            "headers": {
+                              "Connection": [
+                                "Keep-Alive"
+                              ],
+                              "Content-Length": [
+                                "109"
+                              ],
+                              "Content-Type": [
+                                "text/html"
+                              ]
+                            },
+                            "reason": "OK",
+                            "status": "200",
+                            "version": "1.1"
+                          },
+                          "type": "http"
                     }
                 },
                 "security": "none"
