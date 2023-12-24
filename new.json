@@ -84,35 +84,25 @@
         }
     ],
     "routing": {
-        "domainStrategy": "IPIfNonMatch",
+        "domainStrategy": "IPOnDemand",
         "rules": [
             {
-                "outboundTag": "block",
+                "type": "field",
+                "ip": [
+                    "geoip:cn",
+                    "geoip:ir"
+                ],
+                "outboundTag": "block"
+            },
+            {
+                "type": "field",
                 "domain": [
-                    "geosite:category-ads-all",
-                    "geosite:phishing",
-                    "geosite:cryptominers",
                     "geosite:category-porn"
                 ],
-                "type": "field"
-            },
-            {
-                "outboundTag": "block",
-                "domain": [
-                    "geosite:ir"
-                ],
-                "type": "field"
-            },
-            {
-                "outboundTag": "block",
-                "ip": [
-                    "geoip:ir",
-                    "geoip:private"
-                ],
-                "type": "field"
+                "outboundTag": "block"
             }
         ]
-    },
+    }
     "stats": {},
     "transport": null
 }
