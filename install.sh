@@ -8,6 +8,7 @@ mkdir $install_dir
 wget https://raw.githubusercontent.com/majidrezarahnavard/xray-configuration/main/reality.json
 wget https://raw.githubusercontent.com/majidrezarahnavard/xray-configuration/main/vmss_http.json
 wget https://raw.githubusercontent.com/majidrezarahnavard/xray-configuration/main/irancell.json
+wget https://raw.githubusercontent.com/majidrezarahnavard/xray-configuration/main/new.json
 
 #instal monitoring
 apt-get update
@@ -22,7 +23,8 @@ apt-get install cron
 apt-get install curl tar unzip jq -y
 apt-get install -y jq
 
-
+echo "net.ipv4.tcp_fastopen = 3" | sudo tee -a /etc/sysctl.conf
+sysctl -p
 
 journalctl --vacuum-time=1d
 
