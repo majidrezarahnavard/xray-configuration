@@ -1,0 +1,123 @@
+{
+    "log": {
+      "loglevel": "warning"
+    },
+    "inbounds": [
+      {
+        "listen": null,
+        "port": 8080,
+        "protocol": "vmess",
+        "settings": {
+          "clients": [
+            {
+              "email": "Sarina",
+              "id": "28208267-f427-4a8f-a6de-f641a7f04793"
+            }
+          ]
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic",
+            "fakedns"
+          ],
+          "enabled": true
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "none",
+          "sockopt": {
+            "acceptProxyProtocol": false,
+            "mark": 0,
+            "tcpFastOpen": true,
+            "tproxy": "off"
+          },
+          "tcpSettings": {
+            "acceptProxyProtocol": false,
+            "header": {
+              "request": {
+                "headers": {
+                  "Host": [
+                    "mashhad1.irancell.ir,shiraz1.irancell.ir,tabriz1.irancell.ir,speedtest1.irancell.ir,ahvaz1.irancell.ir,esfahan1.irancell.ir,server-9889.prod.hosts.ooklaserver.net,server-10076.prod.hosts.ooklaserver.net,server-9795.prod.hosts.ooklaserver.net,server-4317.prod.hosts.ooklaserver.net"
+                  ]
+                },
+                "method": "GET",
+                "path": [
+                  "/download",
+                  "/upload"
+                ]
+              },
+              "response": {
+                "headers": {
+                  "Connection": [
+                    "Keep-Alive"
+                  ],
+                  "Content-Length": [
+                    "109"
+                  ],
+                  "Content-Type": [
+                    "text/html"
+                  ]
+                },
+                "reason": "OK",
+                "status": "200",
+                "version": "1.1"
+              },
+              "type": "http"
+            }
+          }
+        },
+        "tag": "inbound-8080"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "wireguard",
+        "settings": {
+          "secretKey": "1Mhryb2WzLOR/0a4Zf1zGJa5rlES0RV0nM5D8J8DLlg=",
+          "address": [
+            "172.16.0.2/32",
+            "3606:4700:110:86b0:c0c2:dcd4:cc8:8510/128"
+          ],
+          "peers": [
+            {
+              "publicKey": "bmAOC+F1FxEMF3dyiK2H5/1SUtzH1JuVo51h2wPfgyo=",
+              "allowedIPs": [
+                "0.0.0.0/0",
+                "::/0"
+              ],
+              "endpoint": "engage.cloudflareclient.com:2408"
+            }
+          ],
+          "reserved": [
+            0,
+            0,
+            0
+          ],
+          "mtu": 1280,
+          "domainStrategy": "ForceIPv6v4"
+        },
+        "tag": "warp"
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {}
+      }
+    ],
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "type": "field",
+          "domain": [
+            "geosite:category-porn"
+          ],
+          "outboundTag": "block"
+        }
+      ]
+    },
+    "stats": {},
+    "transport": null
+  }

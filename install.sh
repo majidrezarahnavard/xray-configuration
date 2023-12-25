@@ -24,6 +24,9 @@ apt-get install curl tar unzip jq -y
 apt-get install -y jq
 
 echo "net.ipv4.tcp_fastopen = 3" | sudo tee -a /etc/sysctl.conf
+echo "net.core.default_qdisc = fq" | sudo tee -a /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control = bbr" | sudo tee -a /etc/sysctl.conf
+
 sysctl -p
 
 journalctl --vacuum-time=1d
