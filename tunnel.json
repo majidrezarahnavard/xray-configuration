@@ -1,0 +1,65 @@
+{
+    "log": {
+        "loglevel": "warning"
+    },
+    "inbounds": [
+        {
+          "port": 5895,
+          "protocol": "vless",
+          "settings": {
+            "udp": false,
+            "clients": [
+              {
+                "id": "81062ae0-ae3e-4754-9c7b-7e35aeb962ce",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "flow": ""
+              }
+            ],
+            "decryption": "none",
+            "allowTransparent": false
+          },
+          "streamSettings": {
+            "network": "ws",
+            "wsSettings": {
+              "path": "/khak-to-saret-filterchi",
+              "headers": {}
+            }
+          }
+        }
+      ],
+    "outbounds": [
+        {
+            "tag": "direct",
+            "protocol": "freedom",
+            "settings": {}
+        },
+        {
+            "tag": "block",
+            "protocol": "blackhole",
+            "settings": {}
+        }
+    ],
+    "routing": {
+        "domainStrategy": "IPOnDemand",
+        "rules": [
+            {
+                "type": "field",
+                "ip": [
+                    "geoip:cn",
+                    "geoip:ir"
+                ],
+                "outboundTag": "block"
+            },
+            {
+                "type": "field",
+                "domain": [
+                    "geosite:category-porn"
+                ],
+                "outboundTag": "block"
+            }
+        ]
+    },
+    "stats": {},
+    "transport": null
+}
